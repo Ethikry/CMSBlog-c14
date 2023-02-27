@@ -1,0 +1,15 @@
+<div class="container mx-auto px-4">
+  <div class="card-header dashboard-post">
+    <h4 class="card-title post-title text-xl font-bold"><a
+        class="text-blue-700 hover:text-blue-900"
+        href="/post/{{id}}"
+      >{{title}}</a></h4>
+    <div class="card-body post-body">
+      <p class="card-body post-content text-gray-700">{{content}}</p>
+      <p class="card-text post-author text-gray-500 text-sm mt-2">Posted by
+        <span class="post-username font-medium">{{user.username}}</span>
+        on
+        <span class="post-date">{{format_date created_at}}</span></p>
+    </div>
+  </div>
+</div>

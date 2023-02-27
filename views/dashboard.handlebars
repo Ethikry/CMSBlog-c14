@@ -1,0 +1,19 @@
+<div class="flex flex-col items-center justify-center h-full">
+
+  <h2 class="text-xl font-bold mb-6">Your Posts</h2>
+
+  <a href="/dashboard/new" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-6">+ New Post</a>
+
+  {{#if posts.length}}
+    <div class="grid grid-cols-1 gap-4">
+      {{#each posts as |post|}}
+        {{> dashboard-postinfo post}}
+      {{/each}}
+    </div>
+  {{else}}
+    <p class="text-gray-500">You haven't created any posts yet.</p>
+  {{/if}}
+
+</div>
+
+<script src="/js/add-post.js"></script>

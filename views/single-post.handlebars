@@ -1,0 +1,22 @@
+<section class="single-post-container">
+  {{> post-info post}}
+
+  {{#if loggedIn}}
+  <div class="comment-container">
+    <h3 class="text-xl font-semibold">Add Comment</h3>
+    <form class="mt-4" id="comment-form">
+      <div class="mb-4">
+        <label for="comment" class="block text-gray-700 font-bold mb-2">Comment</label>
+        <input id="comment" name="comment-body" type="text" class="form-input rounded-md shadow-sm block w-full">
+      </div>
+      <button type="submit" class="btn">Submit</button>
+    </form>
+  </div>
+  {{/if}}
+
+  {{> comments post.comments}}
+</section>
+
+{{#if loggedIn}}
+<script src="/js/comment.js"></script>
+{{/if}}

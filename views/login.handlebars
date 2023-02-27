@@ -1,0 +1,41 @@
+<h2 class="text-xl font-semibold pb-4">Log In</h2>
+<form id="login-form" class="card-body">
+  <div class="mb-4">
+    <label class="block text-gray-700 font-bold mb-2" for="username-login">
+      Username
+    </label>
+    <input
+      id="username-login"
+      type="text"
+      autofocus="true"
+      class="form-input px-4 py-2 border w-full rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+    />
+  </div>
+  <div class="mb-6">
+    <label class="block text-gray-700 font-bold mb-2" for="password-login">
+      Password
+    </label>
+    <input
+      id="password-login"
+      type="password"
+      autofocus="true"
+      class="form-input px-4 py-2 border w-full rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+    />
+  </div>
+  <div class="flex items-center justify-between">
+    <button
+      type="submit"
+      class="btn bg-blue-500 text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+    >
+      Login
+    </button>
+    <a
+      class="btn bg-gray-200 hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+      href="/signup"
+    >
+      Sign Up
+    </a>
+  </div>
+</form>
+
+<script src="/js/login.js"></script>

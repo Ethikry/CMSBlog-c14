@@ -1,0 +1,68 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Just Another Tech Blog</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
+    ></script>
+  </head>
+
+  <body>
+    <div class="container mx-auto">
+      <header class="flex justify-between items-center py-4">
+        <h1><a class="logo text-3xl font-bold text-gray-800" href="/">Just
+            Another Tech Blog</a></h1>
+        <nav>
+          <ul class="navbar flex">
+            <li><a
+                class="link block px-3 py-2 text-gray-800 hover:text-gray-500"
+                href="/"
+              >Home</a></li>
+            <li><a
+                class="link block px-3 py-2 text-gray-800 hover:text-gray-500"
+                href="/dashboard"
+              >Dashboard</a></li>
+            {{#if loggedIn}}
+              <li><a
+                  class="link block px-3 py-2 text-gray-800 hover:text-gray-500 cursor-pointer"
+                  id="logout"
+                >Logout</a></li>
+            {{else}}
+              <li><a
+                  class="link block px-3 py-2 text-gray-800 hover:text-gray-500"
+                  href="/login"
+                >Login</a></li>
+            {{/if}}
+          </ul>
+        </nav>
+      </header>
+
+      <main class="py-4">
+        {{{body}}}
+      </main>
+
+      <footer class="bg-gray-800 text-gray-100 py-4">
+        <div class="container mx-auto">
+          <p>
+            Just Another Tech Blog by
+            <a href="https://github.com/ethikry" class="underline">Ethan Gayton</a>
+          </p>
+        </div>
+      </footer>
+
+      {{#if loggedIn}}
+        <script
+          src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"
+        ></script>
+        <script src="/js/logout.js"></script>
+      {{/if}}
+    </div>
+  </body>
+</html>

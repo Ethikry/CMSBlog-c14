@@ -1,0 +1,14 @@
+<div
+  class="flex justify-between items-center border-b-2 border-gray-300 py-3 px-4 mb-4"
+>
+  <h4 class="text-lg font-medium"><a
+      href="/dashboard/edit/{{id}}"
+      class="text-blue-500 hover:underline"
+    >{{title}}</a></h4>
+  <p class="text-sm font-medium text-gray-500">{{format_date created_at}}</p>
+</div>
+<div class="px-4 pb-4">
+  <p class="text-gray-700 leading-7">{{content}}</p>
+  <p class="text-gray-500 text-sm mt-2">Posted by
+    <span class="text-blue-500">{{user.username}}</span></p>
+</div>
