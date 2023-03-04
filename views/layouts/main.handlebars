@@ -16,31 +16,63 @@
 
   <body>
     <div class="container mx-auto">
-      <header class="flex justify-between items-center py-4 bg-gray-400">
-        <h1><a class="logo text-3xl font-bold text-gray-800" href="/">Just
-            Another Tech Blog</a></h1>
-        <nav>
-          <ul class="navbar flex">
-            <li><a
-                class="link block px-3 py-2 text-gray-800 hover:text-gray-500"
-                href="/"
-              >Home</a></li>
-            <li><a
-                class="link block px-3 py-2 text-gray-800 hover:text-gray-500"
-                href="/dashboard"
-              >Dashboard</a></li>
-            {{#if loggedIn}}
-              <li><a
-                  class="link block px-3 py-2 text-gray-800 hover:text-gray-500 cursor-pointer"
+      <header>
+        <nav class="border-gray-200 px-4 lg:px-6 py-2.5 bg-gray-800">
+          <div
+            class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl"
+          >
+            <a href="/" class="flex items-center">
+              <span
+                class="self-center text-xl font-semibold whitespace-nowrap text-white"
+              >Just Another Tech Blog</span>
+            </a>
+
+            <div class="flex items-center lg:order-2">
+              {{! <a
+          href="/dashboard"
+          class="focus:ring-4  font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 hover:bg-gray-700 focus:outline-none focus:ring-gray-800"
+        >Dashboard</a> }}
+              {{#if loggedIn}}
+                <a
                   id="logout"
-                >Logout</a></li>
-            {{else}}
-              <li><a
-                  class="link block px-3 py-2 text-gray-800 hover:text-gray-500"
+                  class="text-white focus:ring-4 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 hover:bg-gray-700 focus:outline-none focus:ring-gray-800"
+                >Logout</a>
+              {{else}}
+                <a
                   href="/login"
-                >Login</a></li>
-            {{/if}}
-          </ul>
+                  class="text-white focus:ring-4 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 hover:bg-gray-700 focus:outline-none focus:ring-gray-800"
+                >Login</a>
+                <a
+                  href="/signup"
+                  class="text-white bg-primary-700 focus:ring-4 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-primary-800"
+                >Get Started</a>
+              {{/if}}
+
+            </div>
+            <div
+              class="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1"
+              id="mobile-menu-2"
+            >
+              <ul
+                class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0"
+              >
+                <li>
+                  <a
+                    href="/"
+                    class="block py-2 pr-4 pl-3 text-white rounded bg-primary-700 lg:bg-transparent lg:text-primary-700 lg:p-0"
+                    aria-current="page"
+                  >Home</a>
+                </li>
+
+                <li>
+                  <a
+                    href="/dashboard"
+                    class="block py-2 pr-4 pl-3 border-b lg:border-0 lg:hover:text-primary-700 lg:p-0 text-gray-400 lg:hover:text-white hover:bg-gray-700 hover:text-white lg:hover:bg-transparent border-gray-700"
+                  >Dashboard</a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </nav>
       </header>
 
