@@ -5,31 +5,34 @@
   
 
   ## Table of Contents 
-  * [Description](#Description)
-  * [Installation](#Installation)
-  * [Usage Information](#Usage)
-  * [Contribution Guidelines](#Contributions)
-  * [Tests](#Tests)
-  * [License](#License)
-  * [Contact Information](#Contact)
+- [CMS Blog](#cms-blog)
+  - [Table of Contents](#table-of-contents)
+  - [Description](#description)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Contributions](#contributions)
+  - [Tests](#tests)
+  - [License](#license)
+  - [Contact](#contact)
   ## Description
-  This project is a cms-style blog site. It allows users to view blog posts and comment on them. Before registering, you can view the site and posts, but you will be prompted to sign up or login before commenting or adding a post. 
+  This is a cms-style blog site. It can be used to view posts and comment. To create a post or comment on a post, create a user. 
   ## Installation
-  To install, clone repo
+  To install this application:
+  1. Clone repo
+  2. Navigate to the cloned repo directory and run `npm install`
+  3. Run `node index.js` to run the program and open the CLI
   ## Usage
-  This can be used as a blog site. To use, go to the deployed site [here](link). 
+  This can be used as a blog site for publishing posts and commenting on posts.
   ## Contributions
-  Not currently accepting contributions.
+  Not accepting contributions.
   ## Tests 
-  To test this project, you can either clone the repo or go to the deployed site.
+  To test, follow installation instructions or view the deployed site [here](link).
   ## License
   
   
   ![License Badge](https://img.shields.io/badge/license-MIT-blue.svg)
   
-  
-  ![License Link](https://opensource.org/licenses/MIT)
-  
+  This project is licensed under the terms of the MIT license.
   © 2023 Ethan Gayton
   
   ## Contact
