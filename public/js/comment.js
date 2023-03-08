@@ -3,6 +3,7 @@ async function commentFormHandler(event) {
 
   const commentTextEl = document.querySelector('input[name="comment-body"]');
   const commentText = commentTextEl.value.trim();
+  console.log(commentText);
 
   if (!commentText) {
     return;
@@ -20,14 +21,13 @@ async function commentFormHandler(event) {
     if (!response.ok) {
       throw new Error(`Failed to create comment: ${response.statusText}`);
     }
-
+    console.log(commentText);
     document.location.reload();
   } catch (err) {
     alert(err.message);
     commentTextEl.focus();
   }
 }
-
 document
-  .querySelector(".comment-form")
+  .querySelector("#comment-form")
   .addEventListener("submit", commentFormHandler);
